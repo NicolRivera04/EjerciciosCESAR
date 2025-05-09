@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Ejercicio 10</title></head>
+<link rel="stylesheet" href="/estilos/style.css">
+<link rel="stylesheet" href="/JS/ejercicio10.js">
+<body>
+  <h2>Ejercicio 10: Saber si un número es par</h2>
+  <p>Escribe un número:</p>
+  <input id="numero" type="number">
+  <br><br>
+  <button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+  <script>
+    function verificar() {
+      var numero = Number(document.getElementById("numero").value);
+      var esPar = (numero % 2 === 0);
+      document.getElementById("resultado").textContent = esPar;
+    }
+  </script>
+</body>
+</html>

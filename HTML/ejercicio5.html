@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Ejercicio 5</title></head>
+<link rel="stylesheet" href="/estilos/style.css">
+<link rel="stylesheet" href="/JS/ejercicio5.js">
+<body>
+  <h2>Ejercicio 5: Consumo de combustible por kilómetro</h2>
+  <p>Kilómetros recorridos:</p>
+  <input id="km" type="number">
+  <p>Litros consumidos:</p>
+  <input id="litros" type="number">
+  <br><br>
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function calcular() {
+      var km = Number(document.getElementById("km").value);
+      var litros = Number(document.getElementById("litros").value);
+      var consumo = litros / km;
+      document.getElementById("resultado").textContent = "Consumo: " + consumo.toFixed(2) + " litros/km";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Ejercicio 7</title></head>
+<link rel="stylesheet" href="/estilos/style.css">
+<link rel="stylesheet" href="/JS/ejercicio7.js">
+<body>
+  <h2>Ejercicio 7: Separar decenas y unidades</h2>
+  <p>Número de dos dígitos:</p>
+  <input id="numero" type="number">
+  <br><br>
+  <button onclick="separar()">Separar</button>
+  <p id="resultado"></p>
+  <script>
+    function separar() {
+      var numero = Number(document.getElementById("numero").value);
+      var decenas = Math.floor(numero / 10);
+      var unidades = numero % 10;
+      document.getElementById("resultado").textContent = 
+        "Decenas: " + decenas + ", Unidades: " + unidades;
+    }
+  </script>
+</body>
+</html>

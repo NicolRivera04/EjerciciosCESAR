@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Ejercicio 6</title></head>
+<link rel="stylesheet" href="/estilos/style.css">
+<link rel="stylesheet" href="/JS/ejercicio6.js">
+<body>
+  <h2>Ejercicio 6: Convertir horas y minutos a segundos</h2>
+  <p>Horas:</p>
+  <input id="horas" type="number">
+  <p>Minutos:</p>
+  <input id="minutos" type="number">
+  <br><br>
+  <button onclick="convertir()">Convertir</button>
+  <p id="resultado"></p>
+  <script>
+    function convertir() {
+      var horas = Number(document.getElementById("horas").value);
+      var minutos = Number(document.getElementById("minutos").value);
+      var segundos = (horas * 60 + minutos) * 60;
+      document.getElementById("resultado").textContent = "Total en segundos: " + segundos;
+    }
+  </script>
+</body>
+</html>

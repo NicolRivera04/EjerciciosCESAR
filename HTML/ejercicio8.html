@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Ejercicio 8</title></head>
+<link rel="stylesheet" href="/estilos/style.css">
+<link rel="stylesheet" href="/JS/ejercicio8.js">
+<body>
+  <h2>Ejercicio 8: Ingredientes para torta de papa</h2>
+  <p>Número de personas:</p>
+  <input id="personas" type="number">
+  <br><br>
+  <button onclick="calcular()">Calcular</button>
+  <pre id="resultado"></pre>
+  <script>
+    function calcular() {
+      var personas = Number(document.getElementById("personas").value);
+      var papa = personas * 200;
+      var kilosPapa = papa / 1000;
+      var huevos = kilosPapa * 5;
+      var cebolla = kilosPapa * 300;
+      document.getElementById("resultado").textContent =
+        "Papa: " + papa + " g\\n" +
+        "Huevos: " + Math.ceil(huevos) + "\\n" +
+        "Cebolla: " + cebolla + " g";
+    }
+  </script>
+</body>
+</html>

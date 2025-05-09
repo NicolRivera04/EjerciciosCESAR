@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Ejercicio 2</title></head>
+<link rel="stylesheet" href="/estilos/style.css">
+<link rel="stylesheet" href="/JS/ejercicio2.js">
+<body>
+  <h2>Ejercicio 2: Área y perímetro de un cuadrado</h2>
+  <p>Lado del cuadrado:</p>
+  <input id="lado" type="number">
+  <br><br>
+  <button onclick="calcular()">Calcular</button>
+  <pre id="resultado"></pre>
+  <script>
+    function calcular() {
+      var lado = Number(document.getElementById("lado").value);
+      var area = lado * lado;
+      var perimetro = lado * 4;
+      document.getElementById("resultado").textContent =
+        "Área: " + area + " unidades²\n" +
+        "Perímetro: " + perimetro + " unidades";
+    }
+  </script>
+</body>
+</html>

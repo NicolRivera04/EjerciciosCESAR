@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Ejercicio 3</title></head>
+<link rel="stylesheet" href="/estilos/style.css">
+<link rel="stylesheet" href="/JS/ejercicio3.js">
+<body>
+  <h2>Ejercicio 3: Saludo personalizado</h2>
+  <button onclick="saludar()">Saludar</button>
+  <p id="saludo"></p>
+  <script>
+    function saludar() {
+      var nombre = prompt("Escribe tu nombre:");
+      document.getElementById("saludo").textContent = "Hola " + nombre;
+    }
+  </script>
+</body>
+</html>
