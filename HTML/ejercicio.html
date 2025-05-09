@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="stylesheet" href="/estilos/style.css" />
     <script src="/JS/ejercicio1.js"></script>
-</head>
-<body>
-    <h2>Ejercicio 1: Calcular Total con IVA</h2>
-  <p>Precio del producto:</p>
-  <input id="precio" type="number">
-  <p>IVA (%):</p>
-  <input id="iva" type="number">
-  <br><br>
-  <button onclick="calcularTotal()">Calcular</button>
-  <pre id="resultado"></pre>
-  <script>
-    function calcularTotal() {
-      var precio = Number(document.getElementById("precio").value);
-      var iva = Number(document.getElementById("iva").value);
-      var valorIVA = (precio * iva) / 100;
-      var total = precio + valorIVA;
-      document.getElementById("resultado").textContent =
-        "Valor del IVA: " + valorIVA.toFixed(2) + " €\n" +
-        "Total a pagar: " + total.toFixed(2) + " €";
-    }
-  </script>
-</body>
+  </head>
+  <body>
+    <h1>Ejercicio 1: Calcular Total con IVA</h1>
+    <p>Precio del producto:</p>
+    <input id="precio" type="number" />
+    <p>IVA (%):</p>
+    <input id="iva" type="number" />
+    <br /><br />
+    <button onclick="calcularTotal()">Calcular</button>
+    <pre id="resultado"></pre>
+    <script>
+      function calcularTotal() {
+        var precio = Number(document.getElementById("precio").value);
+        var iva = Number(document.getElementById("iva").value);
+        var valorIVA = (precio * iva) / 100;
+        var total = precio + valorIVA;
+        document.getElementById("resultado").textContent =
+          "Valor del IVA: " +
+          valorIVA.toFixed(2) +
+          " €\n" +
+          "Total a pagar: " +
+          total.toFixed(2) +
+          " €";
+      }
+    </script>
+  </body>
 </html>
